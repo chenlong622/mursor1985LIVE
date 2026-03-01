@@ -40,12 +40,6 @@ jobs:
                   mv "$tmpfile" "$outfile"
                   echo "✅ $outfile 下载并覆盖完成"
 
-                  # ---- yylunbo.m3u 额外处理 ----
-                  if [ "$outfile" = "yylunbo.m3u" ]; then
-                    sed -i 's#https://live.ottiptv.cc#https://yylunbo.ottiptv.cc#g' "$outfile"
-                    echo "🔧 已将 $outfile 中的 live.ottiptv.cc 替换为 yylunbo.ottiptv.cc"
-                  fi
-
                   # ---- douyuyqk.m3u 额外处理 ----
                   if [ "$outfile" = "douyuyqk.m3u" ]; then
                     sed -i 's#https://live.ottiptv.cc#https://goodiptv.club#g' "$outfile"
